@@ -7,6 +7,7 @@
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
+
 header {
   background: var(--primary);
   display: flex;
@@ -70,9 +71,51 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 40px 20px;
+  padding: 0 20px;
+  background-color: #8194f3;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
 }
 .profile-bio h1 {
   font-size: 2rem;
   margin-bottom: 10px;
+}
+.profile-bio p {
+  font-size: 1rem;
+  max-width: 400px;
+}
+.hero-image img {
+  width: 100%;
+  max-width: 250px;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+@media (min-width: 768px) {
+  #home {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  #home {
+    padding: 0px 80px;
+    max-width: 80%;
+    margin: auto;
+  }
+  .profile-bio h1 {
+    font-size: 3rem;
+  }
+  .profile-bio p {
+    font-size: 1.2rem;
+  }
+  .hero-image img {
+    max-width: 350px;
+  }
 }

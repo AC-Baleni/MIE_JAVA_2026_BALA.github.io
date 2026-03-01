@@ -22,61 +22,84 @@
 
     <main>
       <section class="projects" id="projects">
-        <!-- Featured Project -->
-        <div class="featured">
-          <img src="/image/heroImg.jpg" alt="Featured Project" />
+        <h2 class="section-title">My Projects</h2>
+
+        <!-- FEATURED PROJECT -->
+        <article class="featured-project">
+          <img
+            src="/image/EMS.png"
+            alt="Escalator Monitoring System Screenshot"
+          />
 
           <div class="featured-content">
-            <h2>Escalator Monitoring System</h2>
-            <p>
-              AI-powered system to monitor escalators in real-time using Azure
-              services. Includes alerts, dashboards, and predictive maintenance.
+            <h3>Escalator Monitoring System</h3>
+
+            <p class="description">
+              AI-powered system that monitors escalators in real-time using
+              Azure services. Provides alerts and predictive maintenance
+              insights.
+            </p>
+
+            <p class="tech">
+              <strong>Technologies:</strong> Java, Spring Boot, GCP, MongoDB
             </p>
 
             <div class="buttons">
-              <a href="#" class="btn">Live Demo</a>
-              <a href="#" class="btn-outline">GitHub</a>
+              <a
+                href="https://escalator-agent-40479673834.us-central1.run.app/"
+                class="btn"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/AC-Baleni/escalator-monitor-agent"
+                target="_blank"
+                class="btn-outline"
+                >GitHub</a
+              >
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- Project Grid -->
+        <!-- 🔲 PROJECT GRID -->
         <div class="project-grid">
-          <div class="card">
-            <img src="/image/heroImg.jpg" alt="Project" />
-            <div class="overlay">
-              <h3>Portfolio Website</h3>
-              <p>Modern responsive portfolio</p>
-              <div class="buttons">
-                <a href="#" class="btn">Live</a>
-                <a href="#" class="btn-outline">Code</a>
-              </div>
-            </div>
-          </div>
+          <article class="project-card">
+            <img src="/image/DevPort.png" alt="Portfolio Website Screenshot" />
 
-          <div class="card">
-            <img src="/image/heroImg.jpg" alt="Project" />
-            <div class="overlay">
-              <h3>IoT Dashboard</h3>
-              <p>Real-time sensor data</p>
-              <div class="buttons">
-                <a href="#" class="btn">Live</a>
-                <a href="#" class="btn-outline">Code</a>
-              </div>
-            </div>
-          </div>
+            <div class="project-content">
+              <h3>Developer Portfolio</h3>
 
-          <div class="card">
-            <img src="/image/heroImg.jpg" alt="Project" />
-            <div class="overlay">
-              <h3>RBAC System</h3>
-              <p>Spring Boot security system</p>
-              <div class="buttons">
-                <a href="#" class="btn">Live</a>
-                <a href="#" class="btn-outline">Code</a>
-              </div>
+              <p class="description">
+                Fully responsive personal portfolio showcasing projects and
+                skills.
+              </p>
+
+              <p class="tech">
+                <strong>Technologies:</strong> HTML, CSS, JavaScript
+              </p>
+
+              <a href="https://baleni.tech" class="btn">Live</a>
             </div>
-          </div>
+          </article>
+
+          <article class="project-card">
+            <img src="/image/We-mentor.png" alt="IoT Dashboard Screenshot" />
+
+            <div class="project-content">
+              <h3>We-Mentor web app</h3>
+
+              <p class="description">
+                Real-time monitoring dashboard displaying IoT sensor data.
+              </p>
+
+              <p class="tech">
+                <strong>Technologies:</strong> React, WebSockets, Chart.js
+              </p>
+
+              <a href="https://github.com/ICEP-DEV/DigitalPlus.Web" class="btn"
+                >GitHub</a
+              >
+            </div>
+          </article>
         </div>
       </section>
     </main>

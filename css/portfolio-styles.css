@@ -1,7 +1,7 @@
 :root {
   --accent: #81f3e0;
   --secondary: #81cdf3;
-  --primary: #8194f3;
+  --primary: linear-gradient(to right, rgb(81, 126, 194), #020617);
 }
 * {
   margin: 0;
@@ -44,7 +44,8 @@ header {
 .nav-links a {
   padding: 15px;
   text-decoration: none;
-  color: black;
+  color: #81cdf3;
+  border: 2px solid #81cdf3;
   border-top: 1px solid #333;
 }
 @media (min-width: 768px) {
@@ -66,32 +67,45 @@ header {
 }
 /* Section */
 .projects {
+  width: 77%;
+  margin: auto;
   padding: clamp(40px, 8vw, 100px);
-  background: #475dc3;
+  background: linear-gradient(to bottom, rgb(81, 126, 194), #020617);
   color: white;
+  border-radius: 24px;
 }
 
-/* Featured project */
-.featured {
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: clamp(28px, 5vw, 40px);
+}
+
+/* ⭐ Featured Project */
+.featured-project {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(20px, 5vw, 50px);
   margin-bottom: 60px;
-  border: 1px solid black;
+  align-items: center;
 }
 
-.featured img {
-  width: 50%;
+.featured-project img {
+  width: 100%;
   border-radius: 12px;
 }
 
-.featured-content h2 {
-  font-size: clamp(24px, 4vw, 36px);
+.featured-content h3 {
+  font-size: clamp(22px, 3vw, 32px);
 }
 
-.featured-content p {
-  margin: 15px 0;
+.description {
   color: #94a3b8;
+  margin: 15px 0;
+}
+
+.tech {
+  margin-bottom: 20px;
 }
 
 /* Buttons */
@@ -103,59 +117,49 @@ header {
 .btn {
   background: #38bdf8;
   padding: 10px 20px;
-  text-decoration: none;
   color: black;
+  text-decoration: none;
   border-radius: 6px;
 }
 
 .btn-outline {
   border: 1px solid #38bdf8;
   padding: 10px 20px;
-  text-decoration: none;
   color: #38bdf8;
+  text-decoration: none;
   border-radius: 6px;
 }
 
-/* Grid */
+/* 🔲 Grid */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: clamp(15px, 3vw, 30px);
-  border: 1px solid black;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
 /* Cards */
-.card {
-  position: relative;
-  overflow: hidden;
+.project-card {
+  background: #0f172a;
   border-radius: 12px;
-}
-
-.card img {
-  width: 50%;
-  display: block;
-}
-
-/* Overlay */
-.overlay {
-  position: absolute;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  overflow: hidden;
   transition: 0.3s;
-  text-align: center;
-  width: 250px;
-  min-height: 290px;
 }
 
-.card:hover .overlay {
-  opacity: 1;
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
 }
 @media (max-width: 768px) {
-  .featured {
+  .featured-project {
     grid-template-columns: 1fr;
   }
 }

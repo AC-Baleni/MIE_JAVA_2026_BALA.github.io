@@ -1,11 +1,48 @@
 :root {
   --accent: #81f3e0;
   --secondary: #81cdf3;
-  --primary: #8194f3;
+  --primary: linear-gradient(to right, rgb(81, 126, 194), #020617);
 }
 * {
   margin: 0;
   font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 0;
+  background: #81cdf3;
+}
+
+/* Rain layer */
+.rain {
+  position: fixed; /* 👈 key: sticks to whole screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+  z-index: -1; /* 👈 stays behind your content */
+}
+
+/* Drops */
+.drop {
+  position: absolute;
+  width: 12px;
+  height: 15px;
+  background: #020617;
+  opacity: 0.5;
+
+  animation: fall linear infinite;
+}
+
+/* Falling animation */
+@keyframes fall {
+  from {
+    transform: translate(-10px, -20px);
+  }
+  to {
+    transform: translate(10px, 100vh);
+  }
 }
 header {
   background: var(--primary);
@@ -43,7 +80,7 @@ header {
 .nav-links a {
   padding: 15px;
   text-decoration: none;
-  color: black;
+  color: #81cdf3;
   border-top: 1px solid #333;
 }
 @media (min-width: 768px) {
@@ -62,4 +99,66 @@ header {
   .nav-links a {
     border: none;
   }
+}
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.contact-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+
+  padding: 40px;
+  border-radius: 16px;
+
+  width: 100%;
+  max-width: 500px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.contact-card h1 {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+  outline: none;
+  font-size: 14px;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #38bdf8;
+}
+.contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+
+  background: #38bdf8;
+  color: black;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #0ea5e9;
 }

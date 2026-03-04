@@ -30,3 +30,19 @@ function createRain() {
 }
 
 createRain();
+
+// Typing logic
+const text = "Java Developer";
+const typingElement = document.getElementById("typing");
+
+let index = 0;
+
+function type() {
+  if (index < text.length) {
+    typingElement.textContent += text.charAt(index);
+    index++;
+    setTimeout(type, 120); // typing speed
+  }
+}
+
+type();

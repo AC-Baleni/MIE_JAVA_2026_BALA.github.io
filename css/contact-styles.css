@@ -75,7 +75,8 @@ header {
   width: 80%;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  background-color: aqua;
+  background-color: rgb(24, 67, 147);
+  z-index: 5;
 }
 .nav-links a {
   padding: 15px;
@@ -161,4 +162,18 @@ header {
 
 .contact-form button:hover {
   background: #0ea5e9;
+}
+.contact-form label {
+  display: none;
+}
+.error {
+  color: #ef4444;
+  font-size: 0.8rem;
+  margin-top: -8px;
+}
+
+#success-message {
+  color: #16a34a;
+  margin-top: 10px;
+  font-weight: 500;
 }

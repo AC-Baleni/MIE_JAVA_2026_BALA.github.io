@@ -37,51 +37,74 @@
         <a href="contact.html">Contact</a>
       </nav>
     </header>
+    <!-- MAIN SECTION-->
+    <main>
+      <div class="contact-page">
+        <div class="contact-card">
+          <h1>Get in Touch</h1>
+          <p class="subtitle">Let’s build something great together.</p>
 
-    <div class="contact-page">
-      <div class="contact-card">
-        <h1>Get in Touch</h1>
-        <p class="subtitle">Let’s build something great together.</p>
+          <form class="contact-form" id="contact-form">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+            <small class="error" id="name-error"></small>
 
-        <form class="contact-form" id="contact-form">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your Name"
-            required
-          />
-          <small class="error" id="name-error"></small>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <small class="error" id="email-error"></small>
 
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Your Email"
-            required
-          />
-          <small class="error" id="email-error"></small>
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+            <small class="error" id="message-error"></small>
 
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Your Message"
-            rows="5"
-            required
-          ></textarea>
-          <small class="error" id="message-error"></small>
+            <button type="submit">Send Message</button>
 
-          <button type="submit">Send Message</button>
-
-          <p id="success-message"></p>
-        </form>
+            <p id="success-message"></p>
+          </form>
+        </div>
       </div>
-    </div>
+    </main>
+    <!-- FOOTER SECTION-->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p class="footer-brand">BALENI.</p>
 
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="cv.html">CV</a>
+          <a href="portfolio.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="footer-social">
+          <a href="https://github.com/AC-Baleni" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/aviwebaleni/" target="_blank"
+            >LinkedIn</a
+          >
+        </div>
+
+        <p class="copyright">© 2026 Aviwe Baleni. All rights reserved.</p>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script src="js/script.js" defer></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
